@@ -2,9 +2,9 @@ from wrapper import *
 
 choptions = ["--no-sandbox", "--disable-gpu", "--window-size=1420,1080"]
 brswer = Brwser(choptions)
-def sso_login():
+def login():
     brswer.go_to("https://qa-portfolio-vanguard.cicada.digital.ge.com/")
-    print("SSO Login")
+    print(" Login")
     brswer.go_sleep(10)
     brswer.send_text("502799960", "//*[@id='username']")
     brswer.send_text("Aut0m@ti0n", "//*[@id='password']")
@@ -75,7 +75,7 @@ def nav_product_level():
 
 
 
-sso_login()
+login()
 verify_elements()
 get_no_of_products()
 nav_product_level()
